@@ -52,18 +52,38 @@
 //3) 
 //a) 
 
-let listaDeTarefas = []
+
 
 //b)
 let tarefa1 = prompt("Digite a primeira tarefa do dia")
-listaDeTarefas.push(tarefa1)
+
 let tarefa2 = prompt("Digite a segunda tarefa do dia")
-listaDeTarefas.push(tarefa2)
+
 let tarefa3 = prompt("Digite a terceira tarefa do dia")
-listaDeTarefas.push(tarefa3)
+
+
+let listaDeTarefas = [tarefa1, tarefa2, tarefa3]
 //c)
 console.log(listaDeTarefas)
 //d) 
-listaDeTarefas.splice(parseInt(prompt("digite qual das tarefas já foi concluida"), 1))
+tarefaFeita = parseInt(prompt("digite o indice da tarefa feita"))
+//e)
+listaDeTarefas.splice(tarefaFeita, 1)
+//f)
 console.log(listaDeTarefas)
-//bateria do notebook acabando :( esqueci o carregador no trabalho
+
+//DESAFIOS
+
+//1)
+let fraseCompleta = prompt("Digite uma Frase")
+
+let arrayDaFrase = fraseCompleta.split(" ")
+console.log(arrayDaFrase)
+
+//2)
+
+let frutasArray = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"]
+
+
+console.log(frutasArray.indexOf("Abacaxi"))
+console.log(frutasArray.length)
