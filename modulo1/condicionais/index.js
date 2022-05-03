@@ -135,7 +135,7 @@ let dollar = "R$"
 if (tipoJogo === "IN") {
     let tipoJogo = "Internacional"
     valorUnitario = valorUnitario / 4.1
-    dollar = "$"
+    dollar = "U$"
 }
 let valorTotal = valorUnitario * numIngresso
 
