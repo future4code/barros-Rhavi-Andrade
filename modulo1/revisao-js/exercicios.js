@@ -183,19 +183,30 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-    //for of  
 
+    for (let i = 0; i < contas.length; i++) {
 
-
+        if (contas[i].compras.length >= 1) {
+            const reducer = (accumulator, curr) => accumulator + curr;
+            contas[i].compras = contas[i].compras.reduce(reducer)
+            contas[i].saldoTotal -= contas[i].compras
+            contas[i].compras = []
+        }
+    }
     return contas
 }
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
 
+    consultas.sort((a, b) => (a.nome > b.nome) ? 1 : -1)
+    return consultas
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
+    consultas.getTime()
+    consultas.sort((a, b) => (a.nome > b.nome) ? 1 : -1)
+    return consultas
 
 }
