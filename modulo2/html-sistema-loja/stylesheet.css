@@ -1,0 +1,63 @@
+html,
+body {
+    height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    min-height: 100%;
+    margin: 0px
+}
+
+.bottomtext {
+    color: white
+}
+
+
+
+.icon {
+    height: 40px;
+    width: 40px;
+}
+
+html {
+    background-image: linear-gradient(white, purple);
+}
+
+#footer {
+    text-align: center;
+    position: fixed;
+    padding: 10px 0px 10px 0px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/
+    height: 80px;
+    background: purple;
+}
+
+.topnav {
+    background-color: white;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: purple;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #7d00a7;
+    color: white;
+}
