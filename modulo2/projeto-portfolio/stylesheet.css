@@ -5,7 +5,13 @@ body {
 }
 
 p {
-    color: orange;
+    color: white;
+}
+
+.about-me {
+    margin-left: 50px;
+    color: #ff6171;
+
 }
 
 .topnav {
@@ -30,22 +36,28 @@ p {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    border-bottom: 1px solid #ffd866
+    border-bottom: 1px solid #ffd866;
+    color: goldenrod;
+
 }
 
 .textbox {
     display: flex;
-    background-color: blue;
-    height: 300px;
-    width: 200px;
-    margin-left: auto;
-
-
+    flex-wrap: wrap;
+    margin-left: 20px;
 }
 
-.textboxtest {
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    background-color: black;
+.picturebox {
+
+    padding: 5px;
+    max-width: 500px;
+}
+
+.sidenumbers {
+    text-align: right;
+    height: 100%;
+    width: 20px;
+    position: fixed;
+    display: inline;
+    color: #5b595c;
 }
