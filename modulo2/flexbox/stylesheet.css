@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    display: flex;
+    background-color: mediumvioletred;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
+
+p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+
+}
+
+.menu-esquerda {
+    padding: 10px;
+
+}
+
+main {
+    display: flex;
+
+
+}
+
+.shelf {
+    display: flex;
+    justify-content: ;
+    flex-wrap: wrap;
+    padding: 10px;
+
+
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 10px;
+    margin: 10px;
+
+}
+
+.bolo {
+    width: 200px;
+}
+
+.textbolo {
+    text-align: center;
+    font-size: smaller;
+}
+
+h4 {
+    text-align: center;
+}
+
+
+nav {
+    background-color: #f2d0e0;
+    width: 250px;
+    height: auto;
+    padding: 1rem 0;
+    min-width: 250px;
+}
+
+.login {}
+
+.icon {
+    max-width: 20px;
+
+}
+
+.icon2 {
+    max-width: 15px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: mediumvioletred;
+    height: 40px;
+    text-align: center;
+    width: 100%;
+
+}
+
+nav img {
+    padding: 0 1rem;
+}
