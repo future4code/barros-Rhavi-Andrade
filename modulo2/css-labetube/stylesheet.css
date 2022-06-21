@@ -1,0 +1,55 @@
+* {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    width: 600px;
+    padding: 20px;
+
+
+
+}
+
+
+
+div {
+
+    max-width: 200px;
+    max-height: 200px;
+    border-style: solid;
+    border-color: green;
+    border-width: 1px;
+
+}
+
+header {
+    background-color: orange;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo {}
+
+.busca {
+    border: none;
+    margin-right: 50px;
+    height: 30px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.533);
+    height: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
