@@ -1,0 +1,63 @@
+body {
+    background-color: #2d2a2e;
+    margin: 0px, 0px, 0px, 0px;
+    font-family: Consolas, 'Courier New', monospace;
+}
+
+p {
+    color: white;
+}
+
+.about-me {
+    margin-left: 50px;
+    color: #ff6171;
+
+}
+
+.topnav {
+    background-color: #2d2a2e;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #fc9855;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    border-bottom: 1px solid gray
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    border-bottom: 1px solid #ffd866;
+    color: goldenrod;
+
+}
+
+.textbox {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+.picturebox {
+
+    padding: 5px;
+    max-width: 500px;
+}
+
+.sidenumbers {
+    text-align: right;
+    height: 100%;
+    width: 20px;
+    position: fixed;
+    display: inline;
+    color: #5b595c;
+}
