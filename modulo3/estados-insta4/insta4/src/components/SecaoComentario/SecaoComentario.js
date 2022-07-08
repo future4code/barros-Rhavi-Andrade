@@ -7,10 +7,9 @@ export function SecaoComentario(props) {
 		<div className='CommentContainer'>
 			<input className='InputComentario'
 				placeholder={'Comentário'}
-				value={props.onChangeComentario}
-				onChange={props.onChangeComentario}
+				value={props.valorInput}
 				type='text'
-				name='comentario'
+				onChange={props.onChangeComentario}
 			/>
 			<button onClick={props.aoEnviar}>Enviar</button>
 		</div>
