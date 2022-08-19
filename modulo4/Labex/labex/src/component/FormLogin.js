@@ -1,42 +1,45 @@
 import { useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../constants/constants";
-
+import { useNavigate } from "react-router-dom";
 
 
 export function FormLogin() {
-    const [email, setEmail] = useState();
+    const [email, setEmail] = useState("");
+    const [senha, setSenha] = useState("");
+    const navigate = useNavigate();
 
-    const [senha, setSenha] = useState();
+
 
     const mudaEmail = (event) => {
         setEmail(event.target.value)
-
     }
     const mudaSenha = (event) => {
         setSenha(event.target.value)
     }
+    const fazerLogin = (event) => {
+        event.preventDefault()
+        axios.post(url, body, headers)
+            .then((response) => {
+                localStorage.setItem("token", response.data.token)
+                localStorage.setItem("userName", email)
+                console.log(response.data);
+                navigate("/AdminHomePage")
+            }).catch((error) => {
+                alert("Usuário não cadastrado ou senha inválida")
+                console.log(error);
+            })
 
+    }
 
-    console.log(email, senha)
 
     const body = {
         "email": email,
         "password": senha
     }
-
     const headers =
         'Content-Type: application/json'
-
     const url = `${BASE_URL}login`
-
-    const fazerLogin = (event) => {
-        event.preventDefault()
-        axios.post(url, body, headers)
-        console.log(body)
-    }
-
-
 
     return (
         <div>
@@ -65,13 +68,9 @@ export function FormLogin() {
                     pattern="^.{3,}"
                 />
                 <button>Login</button>
+
             </form>
         </div>
-
-
-
     )
-
-
 
 }

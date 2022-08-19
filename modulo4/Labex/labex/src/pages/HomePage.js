@@ -25,8 +25,10 @@ export default function HomePage() {
     return (
         < div >
             <p>HomePage</p>
-            <button onClick={goToLoginPage}>Log in</button>
+
             <button onClick={goToListTripsPage}>List Trips</button>
+
+            <button onClick={goToLoginPage}>Admin Area</button>
         </div >
     )
 }
