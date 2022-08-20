@@ -35,6 +35,7 @@ export default function ApplicationFormPage() {
                 <input
                     name="name"
                     id="name"
+                    placeholder="Profissão"
 
                 />
                 <span>Application Text</span>
