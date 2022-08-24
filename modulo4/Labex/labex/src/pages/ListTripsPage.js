@@ -12,10 +12,19 @@ export default function ListTripsPage() {
     const goToHomePage = () => {
         navigate("/HomePage")
     }
+
+
+
+
     const [data, isLoading, error] = useRequestData(`${BASE_URL}trips`)
+
+
+
+
     const tripsList =
         data.trips && data.trips.map((trip) => {
-            return <li>{trip.name}</li>
+
+            return <li>{trip.name}< button> apply</button></li >
         })
     return (
         <div>
