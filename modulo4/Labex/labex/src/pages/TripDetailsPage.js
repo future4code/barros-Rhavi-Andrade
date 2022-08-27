@@ -38,7 +38,7 @@ export default function TripDetailsPage() {
 
         })
 
-    const triipDetalhes = dado2.trip && dado2.trip.map((td) => {
+    const tripDetalhes = dado2.trip && dado2.trip.map((td) => {
         return <div>
             {td.name}
             {td.date}
