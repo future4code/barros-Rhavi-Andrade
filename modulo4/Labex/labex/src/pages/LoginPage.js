@@ -22,7 +22,7 @@ export default function LoginPage() {
             {!localStorage.token && <FormLogin />}
 
 
-            <p>LoginPage</p>
+
 
             <button onClick={goToHome}> Home</button>
             <button onClick={goToLastPage}> Voltar</button>

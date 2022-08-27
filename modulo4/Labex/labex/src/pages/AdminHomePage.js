@@ -2,8 +2,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 import * as Rot from '../component/Coordinator'
+import { useAuth } from '../hook/useAuth';
 
 export default function AdminHomePage() {
+    useAuth()
     const Navigate = useNavigate()
     const logOut = () => {
         localStorage.clear()

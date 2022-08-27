@@ -1,13 +1,15 @@
 import React from "react";
 import Router from "./component/Router";
+import styled from "styled-components";
+import * as style from "./component/styled"
 
 
 
 function App() {
   return (
-    <div className="App">
+    <style.AppBg className="App">
       <Router />
-    </div>
+    </style.AppBg>
   );
 }
 

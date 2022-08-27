@@ -3,6 +3,7 @@
 import React from "react"
 import { useNavigate } from 'react-router-dom';
 import styled from "styled-components";
+import * as style from "../component/styled";
 
 
 
@@ -23,12 +24,12 @@ export default function HomePage() {
         navigate("/ListTripsPage")
     }
     return (
-        < div >
-            <p>HomePage</p>
+        < style.AppBg >
+            <style.Logo>Magical Mystery Tour</style.Logo>
 
-            <button onClick={goToListTripsPage}>List Trips</button>
+            <style.BigButton onClick={goToListTripsPage}>List Trips</style.BigButton>
 
-            <button onClick={goToLoginPage}>Admin Area</button>
-        </div >
+            <style.BigButton onClick={goToLoginPage}>Admin Area</style.BigButton>
+        </style.AppBg >
     )
 }
