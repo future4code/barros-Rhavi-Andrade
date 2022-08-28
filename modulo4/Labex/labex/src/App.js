@@ -1,15 +1,16 @@
 import React from "react";
 import Router from "./component/Router";
-import styled from "styled-components";
-import * as style from "./component/styled"
-
+import { ChakraProvider } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 
 function App() {
   return (
-    <style.AppBg className="App">
-      <Router />
-    </style.AppBg>
+    <ChakraProvider>
+      <Box w='100%' h='100vh' bg='#4f2600' >
+        <Router />
+      </Box>
+    </ChakraProvider>
   );
 }
 

@@ -1,7 +1,17 @@
 //Para o usuário se candidatar à viagens, página que vai ter o formulário de inscrição
 import { React, useState } from "react"
-import { COUNTRY_URL } from "../constants/constants";
-import countriesList from "../constants/countries.json"
+import {
+    Button,
+    ButtonGroup,
+    Center,
+    Box,
+    Flex,
+    Spacer,
+    Select,
+    Heading,
+    Input,
+    FormLabel,
+} from "@chakra-ui/react";
 
 
 export default function ApplicationFormPage() {
@@ -43,70 +53,71 @@ export default function ApplicationFormPage() {
 
     return (
 
-        < div >
+        < Center >
 
-            <h1>ApplicationFormPage</h1>
+            <Heading color='white'>ApplicationFormPage
+                Não consigo colocar esse texto no topo :D</Heading>
+            <Box h='1000px' width='300px' borderColor='white' borderStyle='solid'>
+                <form>
+                    <FormLabel color='white'>Nome</FormLabel>
+                    <Input
+                        name="name"
+                        id="name"
+                        type="text"
 
-            <form>
-                <span>Nome</span>
-                <input
-                    name="name"
-                    id="name"
-                    type="text"
-                    placeholder="Name"
-                    value={name}
-                    onChange={handleInputName}
-                    required
-                    defaultValue={"nan"}
+                        value={name}
+                        onChange={handleInputName}
+                        required
+                        defaultValue={"nan"}
 
-                />
-                <span>Idade</span>
-                <input
-                    name="age"
-                    id="age"
-                    type="number"
-                    placeholder="Age"
-                    value={age}
-                    defaultValue={"nan"}
-                    onChange={handleInputAge}
+                    />
+                    <FormLabel color='white'>Idade</FormLabel>
+                    <Input
 
-                />
-                <span>Profissão</span>
-                <input
-                    name="name"
-                    id="name"
-                    placeholder="Profissão"
-                    value={occupation}
-                    defaultValue={"nan"}
-                    onChange={handleInputOccupation}
+                        id="age"
+                        type="number"
 
-                />
-                <span>Application Text</span>
-                <input
-                    name="name"
-                    id="name"
-                    placeholder="application"
-                    value={application}
-                    defaultValue={"nan"}
-                    onChange={handleInputApplication}
+                        value={age}
+                        defaultValue={"nan"}
+                        onChange={handleInputAge}
 
-                />
-                <span>Country</span>
-                <select
-                    name="name"
-                    id="name"
-                    placeholder="Country"
-                    value={country}
-                    defaultValue={"nan"}
-                    onChange={handleSelectCountry}
-                    required
-                >
-                    <option>Brazil</option>
-                    <option>United States</option>
-                    <option>USSR</option>
+                    />
+                    <FormLabel color='white'>Profissão</FormLabel>
+                    <Input
+
+                        id="name"
+
+                        value={occupation}
+                        defaultValue={"nan"}
+                        onChange={handleInputOccupation}
+
+                    />
+                    <FormLabel color='white'>Application Text</FormLabel>
+                    <Input
+                        name="name"
+                        id="name"
+
+                        value={application}
+                        defaultValue={"nan"}
+                        onChange={handleInputApplication}
+
+                    />
+                    <FormLabel color='white'>Country</FormLabel>
+                    <Select
+
+                        id="name"
+                        color='white'
+                        value={country}
+                        defaultValue={"nan"}
+                        onChange={handleSelectCountry}
+                        required
+                    >
+                        <option>Brazil</option>
+                        <option>United States</option>
+                        <option>USSR</option>
 
 
-                    {/* {countriesList.nome && countriesList.nome.map((option, index) => (
+                        {/* {countriesList.nome && countriesList.nome.map((option, index) => (
                         console.log("olá"),
                         < option key={index} value={option.nome.abreviado} >
                             {option.nome.abreviado}
@@ -114,14 +125,17 @@ export default function ApplicationFormPage() {
 
                         </option>
                     ))} */}
-                </select>
-                <button>submit</button>
-            </form>
+                    </Select>
+                    <Button colorScheme='blue'>submit</Button>
 
-            <br></br>
+                </form>
 
-            <button onClick={console.log(body)}>test</button>
+            </Box>
 
-        </div >
+
+
+
+
+        </Center >
     )
 }

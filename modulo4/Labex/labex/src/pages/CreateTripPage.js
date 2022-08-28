@@ -1,13 +1,22 @@
 // Formulário para o administrador criar uma nova viagem
 import React from "react"
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import styled from "styled-components";
 import { useAuth } from "../hook/useAuth";
 import { useForm } from "../hook/useForm";
 import { BASE_URL } from "../constants/constants";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import * as Rot from "../component/Coordinator"
+import {
+    Button,
+    ButtonGroup,
+    Center,
+    Box,
+    Flex,
+    Spacer,
+    Heading,
+    Input,
+    FormLabel,
+} from "@chakra-ui/react";
 
 export default function CreateTripPage() {
     useAuth()
@@ -33,65 +42,66 @@ export default function CreateTripPage() {
             .catch((error) => console.log(error))
     }
     return (
-        <div>
-            <p>CreateTripPage</p>
-            <form onSubmit={cadastrarViagem}>
-                <label>Name</label>
+        <Center w='100%' h='100%'>
+            <Box>
+                <Heading color='white'>Create Trips:</Heading>
+                <Spacer></Spacer>
 
-                <input
-                    name="name"
-                    id="name"
-                    type="text"
-                    placeholder="Name"
-                    value={form.name}
-                    onChange={onChange}
-                    required
-                />
-                <label>Planet</label>
-                <input
-                    name="planet"
-                    id="planet"
-                    type="text"
-                    placeholder="Planet"
-                    value={form.planet}
-                    onChange={onChange}
-                    required
+                <form onSubmit={cadastrarViagem}>
+                    <FormLabel color='white' htmlFor="Name">Name</FormLabel>
 
-                />
-                <label>Date</label>
-                <input
-                    name="date"
-                    id="date"
-                    type="date"
-                    placeholder="Date"
-                    value={form.date}
-                    onChange={onChange}
-                    pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$"
-                    required
-                    honda nav
+                    <Input
+                        type="text"
+                        name="name"
+                        value={form.name}
+                        id="name"
+                        onChange={onChange}
+                        required
+                    />
+                    <FormLabel color='white'>Destination</FormLabel>
+                    <Input
+                        name="planet"
+                        id="planet"
+                        type="text"
+                        value={form.planet}
+                        onChange={onChange}
+                        required
 
-                />
-                <label>description</label>
-                <input
-                    name="description"
-                    id="description"
-                    type="text"
-                    placeholder="Description"
-                    value={form.description}
-                    onChange={onChange}
-                    required
-                />
-                <input
-                    name="duration"
-                    id="duration"
-                    placeholder="Duration in Days"
-                    value={form.duration}
-                    onChange={onChange}
-                    required
-                />
-                <button>buttonístico</button>
-            </form>
-            <button onClick={() => Rot.goToAdminHomePage(Navigate)}>go back</button>
-        </div >
+                    />
+                    <FormLabel color='white'>Date</FormLabel>
+                    <Input
+                        name="date"
+                        id="date"
+                        type="date"
+                        value={form.date}
+                        onChange={onChange}
+                        pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$"
+                        required
+                        honda nav
+
+                    />
+                    <FormLabel color='white'>Description</FormLabel>
+                    <Input
+                        name="description"
+                        id="description"
+                        type="text"
+                        value={form.description}
+                        onChange={onChange}
+                        required
+                    />
+                    <FormLabel color='white'>Duration</FormLabel>
+                    <Input
+                        name="duration"
+                        id="duration"
+                        value={form.duration}
+                        onChange={onChange}
+                        required
+                    />
+                    <Button margin='1' colorScheme='blue'>buttonístico</Button>
+                    <Button margin='1' colorScheme='blue' onClick={() => Rot.goToAdminHomePage(Navigate)}>go back</Button>
+
+                </form>
+            </Box>
+        </Center >
     )
 }
